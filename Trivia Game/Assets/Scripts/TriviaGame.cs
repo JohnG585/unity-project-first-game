@@ -39,6 +39,11 @@ public class TriviaGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        for(int i = 0; i < questionNumbersChosen.Length; i++)
+        {
+            questionNumbersChosen[i] = -1;
+        }
+
         questions[0] = new Question("What is the capital of Spain?", new string[] { "Topeka", "Amsterdam", "Madrid", "London", "Toledo" }, 2);
         questions[1] = new Question("Who was the second US President?", new string[] { "George Washington", "John Adams", "Thomas Jefferson", "James Madison", "Andrew Jackson" }, 1);
         questions[2] = new Question("What is the second planet in our solar system?", new string[] { "Earth", "Mars", "Pluto", "Mercury", "Venus" }, 4);
